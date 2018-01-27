@@ -6,7 +6,7 @@ defmodule Dictionary.Application do
     import Supervisor.Spec, warn: false
 
     children = [
-      worker(Dictionary.WordList, []),
+      Dictionary.WordList,
     ]
 
     options = [
