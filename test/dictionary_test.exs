@@ -2,14 +2,11 @@ defmodule DictionaryTest do
   use ExUnit.Case
   doctest Dictionary
 
-  test "Agent restart" do
-    word1 = Dictionary.random_word()
-
-    pid = Process.whereis(Dictionary.WordList)
-    Process.flag(:trap_exit, true)
-    Dictionary.WordList.die()
-    word2 = Dictionary.random_word()
-
-    refute word1 == word2
+  test "Words are returned" do
+    word = Dictionary.random_word()
+    assert is_binary(word)
+    assert String.length(word) >= 4
+    assert word =~ ~r/^[a-zA-Z']+$/
   end
+
 end
