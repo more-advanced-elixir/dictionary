@@ -20,6 +20,7 @@ defmodule Dictionary.Mixfile do
 
   defp deps do
     [
+      { :swarm, [ github: "bitwalker/swarm" ] },
     ]
   end
 end
