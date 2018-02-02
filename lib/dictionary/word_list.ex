@@ -1,6 +1,6 @@
 defmodule Dictionary.WordList do
 
-  @me __MODULE__
+  @me { :via, Swarm, __MODULE__ }
 
   use Agent
 

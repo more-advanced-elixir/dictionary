@@ -20,6 +20,7 @@ defmodule Dictionary.Mixfile do
 
   defp deps do
     [
+      { :swarm, "~> 3.0" }
     ]
   end
 end
