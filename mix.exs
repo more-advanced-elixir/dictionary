@@ -20,7 +20,8 @@ defmodule Dictionary.Mixfile do
 
   defp deps do
     [
-      { :swarm, "~> 3.0" }
+      { :arcade, path: "../arcade", runtime: false },
+      { :swarm, "~> 3.0" },
     ]
   end
 end

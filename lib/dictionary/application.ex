@@ -3,6 +3,9 @@ defmodule Dictionary.Application do
   use Application
 
   def start(_type, _args) do
+
+    Arcade.connect_as(:dictionary)
+
     children = [
       Dictionary.WordList,
     ]
@@ -14,5 +17,7 @@ defmodule Dictionary.Application do
 
     Supervisor.start_link(children, options)
   end
+
+
 
 end
